@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1738466562029,
+      "tag": "0000_violet_apocalypse",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1741061909151,
+      "tag": "0001_mushy_living_tribunal",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1741492737483,
+      "tag": "0002_red_leech",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1742183456289,
+      "tag": "0003_lush_clea",
+      "breakpoints": true
+    }
+  ]
+}
