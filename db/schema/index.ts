@@ -9,3 +9,5 @@ export * from './sessions';
 export * from './authSessions';
 export * from './tickets';
 export * from './resources';
+export * from './soloEndorsements';
+export * from './roster';
