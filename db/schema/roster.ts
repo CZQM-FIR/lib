@@ -1,5 +1,5 @@
 import { relations, type InferSelectModel } from 'drizzle-orm';
-import { int, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import { int, sqliteTable, text, unique } from 'drizzle-orm/sqlite-core';
 import { positions, users } from '.';
 
 export const roster = sqliteTable('roster', {
@@ -21,3 +21,38 @@ export const rosterRelations = relations(roster, ({ one, many }) => ({
 export type RosterStatus = InferSelectModel<typeof roster>;
 
 export type RosterPosition = 'gnd' | 'twr' | 'app' | 'ctr';
+
+export type RosterUserData = {
+	cid: number;
+	name_first: string;
+	name_last: string;
+	name_full: string;
+	email: string;
+	ratingID: number;
+	division: string | null;
+	region: string | null;
+	subdivision: string | null;
+	bio: string | null;
+	rating: {
+		id: number;
+		long: string;
+		short: string;
+	};
+	soloEndorsements: {
+		id: number;
+		positionId: number | null;
+		expiresAt: Date;
+		position: {
+			id: number;
+			name: string;
+			callsign: string;
+			frequency: string;
+		};
+	}[];
+	roster: {
+		id: number;
+		status: number;
+		position: RosterPosition | string; // remove string
+		controllerId: number;
+	}[];
+};
