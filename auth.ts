@@ -59,7 +59,8 @@ export function setSessionTokenCookie(event: RequestEvent, token: string, expire
     httpOnly: true,
     sameSite: 'lax',
     expires: expiresAt,
-    path: '/'
+    path: '/',
+    domain: '.' + event.url.hostname.split('.').slice(-2).join('.')
   });
 }
 
