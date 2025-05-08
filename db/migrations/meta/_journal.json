@@ -50,6 +50,13 @@
       "when": 1746658646149,
       "tag": "0006_optimal_harrier",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1746671284273,
+      "tag": "0007_wise_umar",
+      "breakpoints": true
     }
   ]
 }
